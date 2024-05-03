@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=D:\SchoolStuff\IS405\Seminar C5\APIService\.venv
+set VIRTUAL_ENV=D:\courses\is405\seminar\chapter5_kafka_spark\Spark-Kafka-Demonstration\apiService\.venv
 
 if not defined PROMPT set PROMPT=$P$G
 

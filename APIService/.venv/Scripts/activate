@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\SchoolStuff\IS405\Seminar C5\APIService\.venv"
+VIRTUAL_ENV="D:\courses\is405\seminar\chapter5_kafka_spark\Spark-Kafka-Demonstration\apiService\.venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
