@@ -13,3 +13,4 @@ spark = SparkSession \
 
 df = spark.read.parquet("data/parquet/files")
 df.show()
+
