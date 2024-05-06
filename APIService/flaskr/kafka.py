@@ -1,6 +1,5 @@
 from confluent_kafka import Producer, Consumer
 from confluent_kafka.admin import AdminClient, NewTopic
-import socket
 
 conf = {"bootstrap.servers": "localhost:9092", "client.id": "demo"}
 
