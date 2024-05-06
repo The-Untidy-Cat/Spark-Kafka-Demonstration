@@ -1,3 +1,4 @@
 flask 
 pyspark 
 confluent_kafka
+user_agents

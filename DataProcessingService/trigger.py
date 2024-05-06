@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.types import StringType, StructField, StructType, LongType, DateType, BooleanType
+from pyspark.sql.types import StringType, StructField, StructType, LongType, BooleanType, TimestampType
 from pyspark.sql.functions import from_json
 
 spark = SparkSession \
@@ -25,7 +25,7 @@ logs_schema = StructType([
     StructField("device", StringType(), True),
     StructField("is_bot", BooleanType(), True),
     StructField("status_code", LongType(), True),
-    StructField("datetime", DateType(), True)
+    StructField("datetime", TimestampType(), True)
 ])
 
 json_df = streaming_df.selectExpr("cast(value as string) as value")
