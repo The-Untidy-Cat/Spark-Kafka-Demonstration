@@ -1,14 +1,25 @@
 from confluent_kafka import Producer, Consumer
 from confluent_kafka.admin import AdminClient, NewTopic
 
-conf = {"bootstrap.servers": "localhost:9092", "client.id": "demo"}
+config = {
+    "bootstrap.servers": "localhost:9092",
+    "id": "demo",
+}
 
-producer = Producer(conf)
+producer = Producer({
+    "bootstrap.servers": config["bootstrap.servers"],
+    "client.id": config["id"]
+})
 
-consumer = Consumer(
-    {"bootstrap.servers": "localhost:9092", "group.id": "demo"})
+consumer = Consumer({
+    "bootstrap.servers": config["bootstrap.servers"],
+    "group.id": "demo"
+})
 
-admin = AdminClient(conf)
+admin = AdminClient({
+    "bootstrap.servers": config["bootstrap.servers"],
+    "client.id": config["id"]
+})
 
 
 def create_topic(topic_name):

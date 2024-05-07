@@ -40,4 +40,12 @@ query = json_expanded_df \
     .option("checkpointLocation", "data/checkpoint") \
     .start()
 
+console_query = json_expanded_df \
+    .writeStream \
+    .outputMode("append") \
+    .format("console") \
+    .start()
+
+console_query.awaitTermination()
+
 query.awaitTermination()
