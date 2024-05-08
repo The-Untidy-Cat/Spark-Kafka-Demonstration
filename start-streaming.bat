@@ -1,2 +1,2 @@
 @echo off
-python DataProcessing/streaming.py
+python DataProcessingService/streaming.py
