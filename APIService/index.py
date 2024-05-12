@@ -31,3 +31,7 @@ def index():
     json_data = json.dumps(data).encode('utf-8')
     send_message("logs", json_data)
     return jsonify(data=data), status_code
+
+
+if __name__ == "__main__":
+    app.run(port=5000)
